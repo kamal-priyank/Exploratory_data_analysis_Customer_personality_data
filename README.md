@@ -1,4 +1,4 @@
-# ML
+# Exploratory Data Anlaysis on Customer Personality Dataset
 
 ## Data exploration
 
@@ -20,11 +20,19 @@ values, and the “income” column contained NA’s, we decided to drop these, 
 python notebook. Moreover, as categorical variables cannot be handled directly, we have
 created dummy variables for these. We have also looked at the correlation matrix, which
 shows moderate to high correlation between the variables.
-
+ 
+<p align="center">
+<img width="524" alt="Screenshot 2022-10-02 at 21 08 37" src="https://user-images.githubusercontent.com/66077662/193474111-830c469e-ac69-4aac-8b8c-5d9dedd5fd5b.png">
+</p>
+<h5 align="center">Heatmap</h5>
 
 Moving on, we looked at the distribution of all the variables. As the clusters have a spherical
 shape, and for this to hold true, all variables should be normally distributed. As seen below,
 our variables are normally distributed.
+
+<p align="center">
+<img width="803" alt="Screenshot 2022-10-02 at 21 09 42" src="https://user-images.githubusercontent.com/66077662/193474151-d943f2cf-80fe-410c-a937-7f9caf3f0c1a.png">
+</p>
 
 Lastly, we decided to scale the dataset so it would allow us to perform the next step, namely
 PCA. The reason behind why we did this, is firstly that since PCA aims to find maximum
@@ -87,6 +95,13 @@ with the PCA function from sklearn, we can transform the data.
 Based on 50% explained variance rule of thumb we choose 5 components for this PCA
 analysis.
 
+<p align="center">
+<img width="405" alt="Screenshot 2022-10-02 at 21 10 44" src="https://user-images.githubusercontent.com/66077662/193474185-402bc510-3f5b-4df6-a625-9dff719cb67d.png">
+</p>
+<p align="center">
+<img width="530" alt="Screenshot 2022-10-02 at 21 11 00" src="https://user-images.githubusercontent.com/66077662/193474197-e36f6de2-6452-48b5-950b-86ca6c0b6ca8.png">
+</p>
+
 ## K-means Analysis
 
 Following PCA, we use KElbowVisualizer to find the optimal number of clusters. This happens
@@ -119,3 +134,12 @@ After some analysis of the clusters we were able to identify the following uniqu
 
 On the visualisations below it can be seen how each variable is distributed within every
 cluster.
+<p align="center">
+<img width="422" alt="Screenshot 2022-10-02 at 21 12 13" src="https://user-images.githubusercontent.com/66077662/193474269-db88de0c-4ef1-4217-9bc9-96396b044792.png">
+</p>
+<p align="center">
+<img width="711" alt="Screenshot 2022-10-02 at 21 13 58" src="https://user-images.githubusercontent.com/66077662/193474299-4b54dc35-db21-4aa5-ad75-6fc9321cc1fd.png">
+</p>
+<h5 align="center">Top Variables Distribution of Clusters</h5>
+
+
